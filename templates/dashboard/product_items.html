@@ -1,0 +1,20 @@
+<!-- inventory_app/templates/inventory_app/product_items.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }} - Items</title>
+</head>
+<body>
+    <h1>{{ product.name }} - Items</h1>
+    <ul>
+        {% for item in items %}
+            <li>
+                {{ item.unique_id }}
+                <a href="{% url 'delete_item' item.id %}">Delete</a>
+            </li>
+        {% empty %}
+            <li>No items found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

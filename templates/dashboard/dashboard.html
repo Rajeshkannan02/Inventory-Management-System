@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .notification {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .notification ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .notification li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Inventory Dashboard</title>
+    </head>
+    <body>
+        <h1>Inventory Dashboard</h1>
+
+        {% if low_stock_products %}
+            <div class="notification">
+                <p>Low stock for the following products:</p>
+                <ul>
+                    {% for product in low_stock_products %}
+                        <li>{{ product.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </body>
+    </html>
+    
+</html>

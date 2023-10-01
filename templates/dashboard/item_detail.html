@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item Detail</title>
+</head>
+<body>
+    <h1>Item Detail</h1>
+    <div>
+        <h2>{{ item.name }}</h2>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+        <p><strong>Price:</strong> ${{ item.price }}</p>
+        <!-- Add more item details here as needed -->
+    </div>
+    <a href="{% url 'product_items' item.product.id %}">Back to Product</a>
+</body>
+</html>
